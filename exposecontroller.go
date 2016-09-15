@@ -441,8 +441,8 @@ func createRoute(ns string, domain string, svc *api.Service, c *kclient.Client, 
 	name := svc.ObjectMeta.Name
 	// need to add namespace back in the hostname but we have to update the fabric8-console oauthclient too
 	// see https://github.com/fabric8io/gofabric8/issues/98
-	//hostName := name + "." + ns + "." + domain
-	hostName := name + "." + domain
+	hostName := name + "." + ns + "." + domain
+	//hostName := name + "." + domain
 
 	var labels = make(map[string]string)
 	labels["provider"] = "fabric8"
